@@ -1,7 +1,11 @@
 import React from "react";
 
-const Preview = () => {
-  return <div>Preview</div>;
+const Preview = ({ value }) => {
+  return (
+    <div className="preview" style={{ backgroundColor: `${value}` }}>
+      {value}
+    </div>
+  );
 };
 
 export default Preview;

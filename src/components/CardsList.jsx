@@ -89,7 +89,7 @@ const CardsList = () => {
     },
   ];
   return (
-    <div>
+    <div className="cardslist__container">
       {products &&
         products.map((product) => <Card key={product.id} product={product} />)}
     </div>

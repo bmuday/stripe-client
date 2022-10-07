@@ -1,7 +1,7 @@
 import React from "react";
 
 const PromoBanner = () => {
-  return <div>PromoBanner</div>;
+  return <div className="promobanner__container">PromoBanner</div>;
 };
 
 export default PromoBanner;
