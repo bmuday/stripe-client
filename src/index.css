@@ -83,21 +83,36 @@ body {
   width: 80%;
   display: grid;
   grid-template-columns: 400px 400px 400px 400px;
-  row-gap: 100px;
+  row-gap: 80px;
 }
 .card__container {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.preview {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 .card__category {
+  margin-bottom: 5px;
   font-size: 0.8rem;
   font-weight: bold;
   color: lightgray;
   text-transform: uppercase;
 }
 .card__name {
+  margin-bottom: 5px;
   font-weight: bold;
 }
 .card__price {
+  margin-bottom: 5px;
 }
 .card__button {
   padding: 10px;
@@ -109,11 +124,4 @@ body {
 
 .card__button:hover {
   transform: scale(1.1);
-}
-
-.preview {
-  width: 300px;
-  height: 200px;
-  border: 1px solid black;
-  border-radius: 5px;
 }
