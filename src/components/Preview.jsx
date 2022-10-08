@@ -1,10 +1,18 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
-const Preview = ({ value }) => {
-  return (
-    <div className="preview" style={{ backgroundColor: `${value}` }}>
-      {value}
-    </div>
+const Preview = ({ product, mini }) => {
+  const { id, value } = product;
+  return mini ? (
+    <div
+      className="mini__preview"
+      style={{ backgroundColor: `${value}` }}
+    ></div>
+  ) : (
+    <Link to={`/card-details/${id}`}>
+      <div className="preview" style={{ backgroundColor: `${value}` }}>
+        {value}
+      </div>
+    </Link>
   );
 };
 

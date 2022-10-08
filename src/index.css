@@ -37,9 +37,12 @@ body {
 /* Store */
 
 .store__container {
+  border: 1px solid black;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
+
+/* Checkout */
 
 .checkout__icon {
   width: 40px;
@@ -67,26 +70,78 @@ body {
 
 .checkout__cart__container {
   width: 400px;
-  height: 500px;
+  height: 400px;
   position: fixed;
   top: 150px;
   right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
   z-index: 1;
+  opacity: 1;
+}
+
+.checkout__cart__list {
+  height: 90%;
+}
+
+.mini__preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout__cart__footer {
+  border-top: 1px solid grey;
+  width: 80%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.checkout__cart__total {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.checkout__cart__button__div {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkout__cart__button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: lightslategrey;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mini__cardslist__container {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  column-gap: 20px;
+  row-gap: 10px;
 }
 
 /* Cards */
 
 .cardslist__container {
-  width: 80%;
   display: grid;
-  grid-template-columns: 400px 400px 400px 400px;
-  row-gap: 80px;
+  grid-template-columns: 350px 350px 350px 350px;
+  column-gap: 50px;
+  row-gap: 50px;
 }
 .card__container {
-  height: 350px;
+  padding: 0;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -94,25 +149,28 @@ body {
 }
 
 .preview {
-  width: 300px;
+  width: 250px;
   height: 200px;
   border-radius: 5px;
   margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.preview:hover {
+  transform: scale(1.1);
 }
 
 .card__category {
-  margin-bottom: 5px;
   font-size: 0.8rem;
   font-weight: bold;
   color: lightgray;
   text-transform: uppercase;
 }
 .card__name {
-  margin-bottom: 5px;
   font-weight: bold;
 }
 .card__price {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .card__button {
   padding: 10px;
