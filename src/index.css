@@ -9,13 +9,19 @@ body {
 /* Header */
 
 .promobanner__container {
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px auto;
   color: #fff;
   background-color: #000;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50px;
 }
 
 .navbar {
@@ -96,12 +102,12 @@ body {
 .mini__cardslist__container {
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 50px;
-  row-gap: 25px;
+  column-gap: 30px;
+  row-gap: 20px;
 }
 
 .mini__preview {
-  width: 150px;
+  width: 190px;
   height: 100px;
   border-radius: 5px;
   display: flex;
@@ -122,20 +128,45 @@ body {
   transform: scale(1.05);
 }
 
-.checkout__cart__button__container {
+.mini__card__infos {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mini__card__name {
+  font-size: 1rem;
+}
+
+.mini__card__count {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.mini__card__price {
+  font-size: 1rem;
+  color: lightgray;
+}
+
+.checkout__cart__link__container {
   width: 90%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.checkout__cart__button {
+.checkout__cart__link {
   padding: 10px;
   border-radius: 5px;
   background-color: lightslategrey;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
+}
+
+.checkout__cart__link:hover {
+  transform: scale(1.05);
 }
 
 .checkout__cart__footer {
@@ -158,11 +189,6 @@ body {
   display: grid;
   grid-template-columns: auto auto auto auto;
   column-gap: 100px;
-}
-
-.mini__card__footer {
-  display: flex;
-  flex-direction: column;
 }
 
 .card__container {
@@ -191,6 +217,7 @@ body {
   font-weight: bold;
   color: lightgray;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .card__name {
