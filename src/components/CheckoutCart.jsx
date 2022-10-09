@@ -1,18 +1,23 @@
+import { Link } from "react-router-dom";
 import MiniCardsList from "./MiniCardsList";
 
-const CheckoutCart = ({ total }) => {
+const CheckoutCart = ({ total, selectedProducts }) => {
+  console.log(selectedProducts.length);
   return (
     <div className="checkout__cart__container">
       <div className="checkout__cart__list">
-        <MiniCardsList />
+        <MiniCardsList selectedProducts={selectedProducts} />
+      </div>
+      <div className="checkout__cart__button__container">
+        {selectedProducts.length > 4 && <p>More items...</p>}
+        <Link className="checkout__cart__button" to="/checkout">
+          Checkout
+        </Link>
       </div>
       <div className="checkout__cart__footer">
         <div className="checkout__cart__total">
-          <span>TOTAL</span>
-          <span>${total}</span>
-        </div>
-        <div className="checkout__cart__button__div">
-          <button className="checkout__cart__button">Checkout</button>
+          <div>TOTAL</div>
+          <div>${total}</div>
         </div>
       </div>
     </div>
