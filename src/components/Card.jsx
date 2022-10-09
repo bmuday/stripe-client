@@ -22,14 +22,18 @@ const Card = ({ product, mini }) => {
   ) : (
     <div className="card__container">
       <Preview product={product} />
-      <span className="card__category">{category}</span>
-      <span className="card__name">
-        {name.length > 12 ? `${name.substring(0, 12)}...` : name}
-      </span>
-      <span className="card__price">${price}</span>
-      <button className="card__button" onClick={addToCart}>
-        Add to Cart
-      </button>
+      <div className="card__category">{category}</div>
+      <div className="card__footer">
+        <div className="card__infos">
+          <span className="card__name">
+            {name.length > 12 ? `${name.substring(0, 12)}...` : name}
+          </span>
+          <span className="card__price">${price}</span>
+        </div>
+        <button className="card__button" onClick={addToCart}>
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 };

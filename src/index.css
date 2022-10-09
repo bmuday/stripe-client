@@ -49,9 +49,83 @@ body {
   justify-content: center;
 }
 
-/* Checkout */
+/* Cards */
 
-.checkout__icon {
+.cardslist__container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 150px;
+}
+
+.card__container {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.preview {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.preview:hover {
+  transform: scale(1.05);
+}
+
+.card__category {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: lightgray;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.card__footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__infos {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__name {
+  font-weight: bold;
+}
+
+.card__price {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: lightgray;
+}
+
+.card__button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightslategrey;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  transform: scale(1.05);
+}
+
+/* Cart */
+
+.cart__icon {
   width: 40px;
   height: 40px;
   position: fixed;
@@ -62,7 +136,7 @@ body {
   background-color: lightskyblue;
 }
 
-.checkout__icon__quantity {
+.cart__icon__quantity {
   width: 20px;
   height: 20px;
   position: fixed;
@@ -76,11 +150,11 @@ body {
   opacity: 1;
 }
 
-.checkout__cart__container {
+.cart__container {
   width: 400px;
-  height: 600px;
+  height: 550px;
   position: fixed;
-  top: 150px;
+  top: 160px;
   right: 30px;
   display: flex;
   flex-direction: column;
@@ -94,16 +168,11 @@ body {
   opacity: 1;
 }
 
-.checkout__cart__list {
-  display: flex;
-  justify-content: center;
-}
-
 .mini__cardslist__container {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 30px;
-  row-gap: 20px;
+  row-gap: 30px;
 }
 
 .mini__preview {
@@ -137,11 +206,11 @@ body {
 
 .mini__card__name {
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .mini__card__count {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .mini__card__price {
@@ -149,88 +218,31 @@ body {
   color: lightgray;
 }
 
-.checkout__cart__link__container {
-  width: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.checkout__cart__link {
-  padding: 10px;
-  border-radius: 5px;
-  background-color: lightslategrey;
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.checkout__cart__link:hover {
-  transform: scale(1.05);
-}
-
-.checkout__cart__footer {
+.cart__footer {
   border-top: 1px solid grey;
   width: 90%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__total {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__link__container {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.checkout__cart__total {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-/* Cards */
-
-.cardslist__container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  column-gap: 100px;
-}
-
-.card__container {
-  padding: 0;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.preview {
-  width: 250px;
-  height: 200px;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  cursor: pointer;
-}
-
-.preview:hover {
-  transform: scale(1.05);
-}
-
-.card__category {
-  font-size: 0.8rem;
+.cart__link {
+  font-size: 1rem;
   font-weight: bold;
-  color: lightgray;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-.card__name {
-  font-weight: bold;
-}
-
-.card__price {
-  margin-bottom: 15px;
-  font-weight: bold;
-  color: lightgray;
-}
-
-.card__button {
+  text-decoration: none;
   padding: 10px;
   border-radius: 5px;
   background-color: lightslategrey;
@@ -238,7 +250,7 @@ body {
   cursor: pointer;
 }
 
-.card__button:hover {
+.cart__link:hover {
   transform: scale(1.05);
 }
 

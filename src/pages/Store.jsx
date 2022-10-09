@@ -1,6 +1,6 @@
 import CardsList from "../components/CardsList";
-import CheckoutCart from "../components/CheckoutCart";
-import CheckoutIcon from "../components/CheckoutIcon";
+import Cart from "../components/Cart";
+import CartIcon from "../components/CartIcon";
 
 const Store = () => {
   // const selectedProducts = () => {};
@@ -44,9 +44,9 @@ const Store = () => {
 
   return (
     <div className="store__container">
-      <CheckoutIcon quantity={5} />
+      <CartIcon quantity={5} />
       <CardsList />
-      <CheckoutCart total={100} selectedProducts={selectedProducts} />
+      <Cart total={100} selectedProducts={selectedProducts} />
     </div>
   );
 };
