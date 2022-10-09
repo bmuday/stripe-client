@@ -151,7 +151,7 @@ body {
 }
 
 .cart__container {
-  width: 400px;
+  width: 450px;
   height: 550px;
   position: fixed;
   top: 160px;
@@ -176,7 +176,7 @@ body {
 }
 
 .mini__preview {
-  width: 190px;
+  width: 200px;
   height: 100px;
   border-radius: 5px;
   display: flex;
