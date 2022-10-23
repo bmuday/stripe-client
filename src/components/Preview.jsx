@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 
-const Preview = ({ product, mini }) => {
+const Preview = ({ product, mini, onRemoveFromCart }) => {
   const { id, value } = product;
   return mini ? (
     <div className="mini__preview" style={{ backgroundColor: `${value}` }}>
-      <div className="mini__preview__delete">X</div>
+      <button
+        className="mini__preview__delete"
+        onClick={() => onRemoveFromCart(id)}
+      >
+        X
+      </button>
     </div>
   ) : (
     <Link to={`/card-details/${id}`}>
-      <div className="preview" style={{ backgroundColor: `${value}` }}>
-        {value}
-      </div>
+      <div className="preview" style={{ backgroundColor: `${value}` }}></div>
     </Link>
   );
 };

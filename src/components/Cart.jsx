@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import MiniCardsList from "./MiniCardsList";
 
-const Cart = ({ total, selectedProducts }) => {
+const Cart = ({ total, selectedProducts, onRemoveFromCart, displayCart }) => {
+  console.log("displayCart", displayCart);
   return (
-    <div className="cart__container">
-      <MiniCardsList selectedProducts={selectedProducts} />
+    <div className={`${displayCart ? "cart__container" : "cart__hidden"}`}>
+      <MiniCardsList
+        selectedProducts={selectedProducts}
+        onRemoveFromCart={onRemoveFromCart}
+      />
       <div className="cart__footer">
         <div className="cart__total">
           <span>TOTAL</span>
